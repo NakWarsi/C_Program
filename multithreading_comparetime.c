@@ -44,22 +44,27 @@ int main()
     pthread_create(&tid5, NULL, thread1, NULL);
 
     pthread_join(tid1, NULL);
+    
     t=clock()-t;
     double time_taken=((double)t)/(CLOCKS_PER_SEC);
     printf("time1  :%d\n",time_taken);
     pthread_join(tid2, NULL);
+    
     t = clock() - t;
     time_taken = ((double)t) / (CLOCKS_PER_SEC);
     printf("time2  :%d\n", time_taken);
     pthread_join(tid3, NULL);
+    
     t = clock() - t;
     time_taken = ((double)t) / (CLOCKS_PER_SEC);
     printf("time3  :%d\n", time_taken);
     pthread_join(tid4, NULL);
+    
     t = clock() - t;
     time_taken = ((double)t) / (CLOCKS_PER_SEC);
     printf("time4  :%d\n", time_taken);
     pthread_join(tid5, NULL);
+    
     t = clock() - t;
     time_taken = ((double)t) / (CLOCKS_PER_SEC);
     printf("time5  :%d\n", time_taken);
