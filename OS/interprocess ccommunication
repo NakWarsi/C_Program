@@ -15,3 +15,26 @@ Inter process communication:- the inter process communication is a machanism whi
                  
  Message Passing:-in this method processes communicate with each other without using any kind of shared memory.                 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+link{
+peterson algoritham :-https://www.geeksforgeeks.org/petersons-algorithm-for-mutual-exclusion-set-1/
+
+
+
+learn extra:-https://www.geeksforgeeks.org/petersons-algorithm-for-mutual-exclusion-set-2-cpu-cycles-and-memory-fence/
+}
