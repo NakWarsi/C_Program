@@ -1,0 +1,29 @@
+Process:-an application consist of one or more processes.process in the simplest term is an executing program.
+
+thread:- thread is a light weight process. so one or more thread run in the context of process. A thread can execute at any part 
+         of the process including part currently beoig executed by other threads.
+         
+         the typical difference is, Thread in same process runs in shared memory space while process runs in saperate memory space.
+         
+    
+  Advantage of Thread:-
+                1)Responsiveness:- if process is devided into multiple thread if one thread completess its execution than it's output
+                                    will imidiately be responded.
+                2)Context switch faster:-process context switch is more overheaded for cpu with respect to thread.
+                3)Resorce sharing:-
+                4)Effective Utilization of multiprocess system:-
+                5)Enhanced throughput of System:- If process is devided into multiple threads and each thread function is considered
+                                                  as one job then number of job completed in per unit time will increased.
+                6)Communication:- as threads share the same memory space unlike procecc so the communication between thread is easier.
+                                  we dont have to follow communication macchanism in thread like in process communication technioque.
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
