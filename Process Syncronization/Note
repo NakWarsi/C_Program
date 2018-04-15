@@ -1,0 +1,13 @@
+there are two kind of process which gets executed in operating system.
+  1:-independent process:-(the process which doesn't effect the execution of other process)
+  2:-Cooperative process:-(execution of one effects the execution of other process because the share the same resource at some point)
+
+criticat section:-critical section is a segment of code that can be accessed only by one process at a time.
+
+any solution to the critical section problem must satisfy following three requirements:-
+      1 Mutual exclusion:-(if a process is executing the critical section then no other process is allowed to execute it)
+      2 Progress:(If no process is critical section then no other process from outside can block it from enteing into Critical section)
+      3 Bounded waiting:(the concept of bounded waiting ony satisfies that no processno peocess have to wait forevere for critical section
+        means no process should go to starvation for that there is a limit(boundry) for the process out side the critical section to get
+        chance to be into critical section)in short(the waiting time for the process outside the critical section should be limited)
+
