@@ -1,0 +1,17 @@
+Inter process communication:- the inter process communication is a machanism which allows processes to communicate each other and 
+                              syncronize their action.
+                             
+   the processes can communicate with each other using these two ways-
+          1 shared memory
+          2 message passing 
+          
+  shared memory:-communication between processes using shared memory requires to share some variable and this is completely dependent
+                 on programmer that how he implements it .
+                 suppose process1 and process2 are executing and they share some resources or use some information from other process.
+                 process one generates some infermation or resources are being used and it keeps it as a recored in shared memmory,
+                 when process2 need to use shared memory it wll check the recored stored in shared memory and acts accordingly.
+                 example:- producer consumer problem.
+                 
+                 
+ Message Passing:-in this method processes communicate with each other without using any kind of shared memory.                 
+ 
