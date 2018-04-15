@@ -19,6 +19,10 @@ thread:- thread is a light weight process. so one or more thread run in the cont
          
          
          
+Type of thread:-1)user level thred
+                2)kernal level thread
+                
+         
          
          
          
