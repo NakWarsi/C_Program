@@ -1,1 +1,54 @@
-mmap:-
+mmap:-as an alternative of standered input output kernal allows to the programmer to intract with any chunck of data directly.
+
+
+mmap( ):-call to mmap  creates a new mapping in the virtual address space of the calling process. The starting address for the new
+         mapping is specified in addr. The length argument specifies the length of the mapping. 
+         
+         
+         
+         
+         
+         
+   example program:-
+
+#include <stdio.h>          
+#include <stdlib.h>
+#include <sys/types.h>          //header for system call
+#include <sys/stat.h>           //it take cares of all the preprocessors and the system calles
+#include <unistd.h>             //this header keeps all the module as sys but we need c specified header to prevent unnecessory dificulties
+#include <fcntl.h>
+#include <sys/mman.h>
+#define FILEPATH "/tmp/mmapped.bin"
+#define NUMINTS  (1000)
+#define FILESIZE (NUMINTS * sizeof(int))
+
+int main(int argc, char *argv[])
+{
+    int i;
+    int fd;
+    int *map;  /* mmapped array of int's */
+
+    fd = open(FILEPATH, O_RDONLY);
+    if (fd == -1) {
+	perror("Error opening file for reading");
+	exit(EXIT_FAILURE);
+    }
+
+    map = mmap(0, FILESIZE, PROT_READ, MAP_SHARED, fd, 0);
+    if (map == MAP_FAILED) {
+	close(fd);
+	perror("Error mmapping the file");
+	exit(EXIT_FAILURE);
+    }
+    
+    //Read the file int-by-int from the mmap
+
+    for (i = 1; i <=NUMINTS; ++i) {
+	printf("%d: %d\n", i, map[i]);
+    }
+    if (munmap(map, FILESIZE) == -1) {
+	perror("Error un-mmapping the file");
+    }
+    close(fd);
+    return 0;
+}
