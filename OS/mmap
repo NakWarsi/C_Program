@@ -12,9 +12,6 @@ mmap( ):-call to mmap  creates a new mapping in the virtual address space of the
    example program:-
 //************************************************mmap read***************************************************************//
 
-
-
-
 #include <stdio.h>          
 #include <stdlib.h>
 #include <sys/types.h>          //header for system call
@@ -91,7 +88,10 @@ int main(int argc, char *argv[])
 
     /* Stretch the file size to the size of the (mmapped) array of ints
      */
+    // LSEEK allows the file ofset tom be set at the end of the file
+     
     result = lseek(fd, FILESIZE-1, SEEK_SET);
+    
     if (result == -1) {
 	close(fd);
 	perror("Error calling lseek() to 'stretch' the file");
@@ -142,4 +142,3 @@ int main(int argc, char *argv[])
     close(fd);
     return 0;
 }
-
