@@ -45,3 +45,5 @@ while(r>=l)
 return 0;
 }
 */
+
+BAKWAS SA CODE H
