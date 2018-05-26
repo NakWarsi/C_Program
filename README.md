@@ -1,2 +1,2 @@
-# C_Program
-these are the only prectice programmes
+# C_Program it is not an actual project
+these are the only practice programmes
