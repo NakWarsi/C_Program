@@ -1,2 +1,2 @@
-# C_Program it is not an actual project
+# Curated collection of some basic Programm for beginners
 these are the only practice programmes
